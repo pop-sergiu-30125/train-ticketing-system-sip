@@ -444,6 +444,8 @@ output:
    - **URL**: http://localhost:8080/api/bookings?trainIds=3,4&fromStationIds=1,5&toStationIds=5,4&count=1
 3. **Verify**: Login as Admin. Check GET http://localhost:8080/api/bookings/train/3 to see the user's new ticket.
 
+![Booking Confirmation](images/after_booking.png)
+
 ### Sequence B: Insertion of Delays
 1. **Scenario**: First, perform Sequence A above so the user has two connected tickets.
 2. **Report Minor Delay**: Login as Admin.
@@ -454,6 +456,8 @@ output:
    - **Method**: POST
    - **URL**: http://localhost:8080/api/trains/3/delay?minutes=115
    - **Effect**: User gets an URGENT Missed Connection Email because they now arrive after 13:00.
+
+![Urgent Delay Notification](images/after_delay_urgent.png)
 
 ---
 
